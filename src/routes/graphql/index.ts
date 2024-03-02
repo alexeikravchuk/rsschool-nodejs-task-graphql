@@ -16,6 +16,20 @@ const plugin: FastifyPluginAsyncTypebox = async (fastify) => {
       return {};
     },
   });
+
+  fastify.route({
+    url:'/',
+    method: 'GET',
+    schema: {
+      response: {
+        200: gqlResponseSchema,
+      },
+    },
+    async handler(req) {
+
+      return {};
+    },
+  })
 };
 
 export default plugin;
